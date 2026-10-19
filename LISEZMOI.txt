@@ -1,0 +1,14 @@
+UP WEB SARL - Site vitrine
+==========================
+
+Contenu
+- index.html : le site complet (logo et captures du portfolio déjà intégrés)
+- logo.png   : logo en fichier séparé
+- images/    : captures du portfolio en fichiers séparés
+
+Mise en ligne
+1. Envoyez le contenu du dossier sur votre hébergeur (index.html à la racine).
+2. Le formulaire de devis ouvre WhatsApp vers le 07 67 84 49 37.
+   Pour changer de numéro : cherchez 212767844937 dans index.html
+   (format international sans le 0 initial : 212 + 9 chiffres).
+3. Liens à compléter : Instagram, LinkedIn, Mentions légales.
