@@ -1,0 +1,67 @@
+THE PRINTING YASSINE - GUIDE D'INSTALLATION
+=============================================
+
+Connexion : admin / admin123
+
+
+ETAPE 1 - INSTALLER SUR CE PC, MAINTENANT
+------------------------------------------
+1. Double-cliquez sur INSTALL.bat
+   (installe Python localement dans un dossier ".venv", une seule fois,
+   ne modifie rien d'autre sur votre PC). Patientez jusqu'a la fin.
+2. Double-cliquez sur Creer_raccourci_bureau.bat
+   -> un raccourci "The Printing Yassine" apparait sur votre Bureau.
+3. Utilisez ce raccourci a chaque fois que vous voulez ouvrir l'application.
+
+Vos donnees (stock, operations, journal) sont enregistrees automatiquement
+sur CE PC, dans :
+   %LOCALAPPDATA%\The Printing Yassine\printing_yassine_data.db
+Fermer puis rouvrir l'application ne supprime jamais vos donnees.
+
+
+ETAPE 2 - INSTALLER SUR LES AUTRES PC DE LA PME, PLUS TARD
+-------------------------------------------------------------
+Important a savoir d'abord : chaque PC garde SES PROPRES donnees, dans
+son propre fichier local. Installer l'application sur un deuxieme PC ne
+partage PAS automatiquement le stock avec le premier PC : ce seront deux
+stocks independants, chacun avec son propre historique. Si vous avez
+besoin que plusieurs PC voient et modifient LE MEME stock en meme temps
+(un vrai systeme partage au sein de la PME), il faut une installation
+differente (un petit serveur central) : demandez-moi et je peux
+preparer cette version.
+
+Si des stocks independants par poste vous conviennent (cas le plus
+frequent : un PC a la reception, un PC a l'atelier, chacun suit ce qui
+le concerne), deux methodes possibles :
+
+  OPTION A - Le plus simple (chaque PC a Python installe a chaque fois)
+  -----------------------------------------------------------------------
+  Copiez tout ce dossier sur le nouveau PC (cle USB, email, reseau), puis
+  refaites l'ETAPE 1 (INSTALL.bat puis Creer_raccourci_bureau.bat) sur ce
+  nouveau PC.
+
+  OPTION B - Recommandee pour les postes de vos employes
+  -----------------------------------------------------------------------
+  Objectif : ne PAS avoir besoin d'installer Python sur chaque PC de la
+  PME. Un seul fichier .exe pret a l'emploi.
+
+  1. Sur CE PC (celui qui a deja Python), double-cliquez sur
+     build_exe.bat une seule fois. Patientez 1 a 3 minutes.
+  2. Un dossier "dist\The Printing Yassine\" est cree. Il contient un
+     fichier "The Printing Yassine.exe" et tout ce qu'il faut avec lui.
+  3. Copiez ce dossier ENTIER (pas seulement le .exe) sur une cle USB ou
+     un partage reseau.
+  4. Sur chaque nouveau PC de la PME : collez le dossier ou vous voulez
+     (ex : Bureau, ou C:\Programmes\), puis double-cliquez directement
+     sur "The Printing Yassine.exe". Aucune installation requise.
+  5. Vous pouvez ensuite creer un raccourci Windows classique vers ce
+     .exe (clic droit sur le fichier -> Envoyer vers -> Bureau).
+
+
+BESOIN D'AIDE ENSUITE ?
+------------------------
+- Pour un stock reellement partage en temps reel entre plusieurs PC de
+  la PME (plutot que des stocks independants), dites-le-moi : la
+  structure actuelle (Flask + SQLite locale) peut etre adaptee pour
+  fonctionner comme un petit serveur sur votre reseau local, accessible
+  depuis tous les postes via un navigateur.

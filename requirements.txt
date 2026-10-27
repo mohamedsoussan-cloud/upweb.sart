@@ -1,0 +1,6 @@
+Flask>=3.1,<4
+SQLAlchemy>=2.0,<3
+python-dotenv>=1.0,<2
+psycopg[binary]>=3.2,<4
+pywebview>=5.4,<7
+gunicorn>=23,<24
